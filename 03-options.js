@@ -1,0 +1,12 @@
+const program = require('commander');
+
+program
+    .option('-c, --cheese [type]', 'Add cheese with optional type');
+
+program.parse(process.argv);
+
+if (program.cheese === undefined) console.log('no cheese');
+else if (program.cheese === true) console.log('add cheese');
+else console.log(`add cheese type ${program.cheese}`);
+
+//Neste exemplo é usado a flag opcional que é declarada entre "[]"
